@@ -1,0 +1,12 @@
+[Unit]
+Description=clash daemon
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/clash/clash -d /opt/clash/
+ExecStopPost=unset http_proxy https_proxy
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
