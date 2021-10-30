@@ -21,5 +21,5 @@ sh install.sh -u
 
 # 4. 打包
 cd /opt
-tar zcvf clash.tar.gz clash/ --exclude=config.yaml --exclude=config_bak
+tar zcvf centos-install-clash.tar.gz centos-install-clash/ --exclude=config.yaml --exclude=config_bak
 ```

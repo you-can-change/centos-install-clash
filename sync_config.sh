@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-base_path=/opt/clash
+base_path=/opt/centos-install-clash
 
 restor_config(){
   echo 'sync fail, restore...'
