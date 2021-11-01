@@ -15,10 +15,11 @@ subscribe_addr='<you_subscribe_addr>'
 # web ui的密码
 ui_secret='<ui_secret>'
 
-# 2. 安装
+# 2. 安装, 安装后还需要通过web选择线路, 并开启代理.
 sh install.sh -i
 
-# 3. 卸载
+
+# 3. 卸载, 卸载后需要手动停止代理.
 sh install.sh -u
 
 # 4. 使用.
