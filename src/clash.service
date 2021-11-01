@@ -4,8 +4,7 @@ Description=clash daemon
 [Service]
 Type=simple
 User=root
-ExecStart=/opt/centos-install-clash/clash -d /opt/centos-install-clash
-ExecStopPost=unset http_proxy https_proxy
+ExecStart=/opt/clash/clash -d /opt/clash
 Restart=on-failure
 
 [Install]

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-base_path=/opt/centos-install-clash
+base_path=/opt/clash
 
 restor_config(){
   echo 'sync fail, restore...'
@@ -21,7 +21,7 @@ backup(){
 
 sync_config(){
   makesure_network
-  wget -q -O ${base_path}/config.yaml $subscribe_addr && \
+  wget -q -O ${base_path}/config.yaml $subscribe_addr --no-check-certificate && \
   sed -i "s/mode: rule/mode: global/g;s/log-level: silent/log-level: info/g;s/secret: ''/secret: '$ui_secret'/g;s%# external-ui: folder%external-ui: ${base_path}/clash-dashboard/dist%g" ${base_path}/config.yaml && \
   systemctl restart clash && echo "sync ok" && return 0 || { echo "sync fail" && return 1; }
 }

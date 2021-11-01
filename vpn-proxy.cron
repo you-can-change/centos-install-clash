@@ -1,1 +1,0 @@
-31 6    * * *   root sh /opt/centos-install-clash/sync_config.sh 
