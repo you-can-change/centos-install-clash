@@ -30,6 +30,7 @@ my_uninstall(){
   rm -rf /etc/profile.d/vpn-proxy.sh
   rm -rf /opt/clash
   systemctl daemon-reload
+  systemctl stop clash
   systemctl reload crond
   echo "--------------------------------------------------------------------------------------------------------------"
   echo "Uninstall successful. Run command: 'unset no_proxy http_proxy https_proxy' to remove proxy settings."
